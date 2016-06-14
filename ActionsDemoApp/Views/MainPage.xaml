@@ -52,7 +52,7 @@
                              RelativePanel.AlignRightWithPanel="True"
                              RelativePanel.AlignTopWithPanel="True" Text="Main Page">
 
-
+            <!--  OpenFlyoutAction  -->
 
             <AppBarButton Icon="Find" Label="Search">
                 <FlyoutBase.AttachedFlyout>
@@ -68,7 +68,7 @@
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
 
-
+                <!--  CloseFlyoutAction  -->
 
                 <!--<Flyout x:Key="FormFlyout">
                     <StackPanel>
@@ -124,6 +124,8 @@
                    RelativePanel.Below="parameterResizer"
                    Text="Current Visual State" />
 
+        <!--  ConditionalAction  -->
+        
         <!--<Button>
             <Core:EventTriggerBehavior EventName="Clicked">
                 <b:ConditionalAction xmlns:b="using:Template10.Behaviors" 
@@ -133,6 +135,7 @@
             </Core:EventTriggerBehavior>
         </Button> -->
 
+        <!--  MessageDialogAction  -->
         
         <Button Content="Click for a Message" x:Name="messageButton">
             <RelativePanel.AlignLeftWithPanel>true</RelativePanel.AlignLeftWithPanel>
@@ -146,7 +149,8 @@
             </Interactivity:Interaction.Behaviors>
         </Button>
 
-
+        <!--  TimeoutAction  -->
+        
         <Button Content="Testing Timeout" x:Name="timeoutButton">
             <RelativePanel.AlignRightWithPanel>true</RelativePanel.AlignRightWithPanel>
             <RelativePanel.Below>messageButton</RelativePanel.Below>
@@ -160,7 +164,8 @@
             </Interactivity:Interaction.Behaviors>
         </Button>
 
-
+        <!--  FocusAction  -->
+        
         <TextBox MinWidth="250" MinHeight="62"
             Header="Parameter to Test Focus"
             Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
@@ -175,7 +180,6 @@
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </TextBox>
-
 
     </RelativePanel>
 </Page>
